@@ -2,4 +2,4 @@
 course physical interfaces
 
 
-### [Introduction Physical Computing 01](https://github.com/HybridThingsLab/course-physical-interfaces/tree/master/introduction_physical_computing_01) 15.10.2019 s
+### [Introduction Physical Computing 01](https://github.com/HybridThingsLab/course-physical-interfaces/tree/master/introduction_physical_computing_01) 15.10.2019
