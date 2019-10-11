@@ -1,2 +1,2 @@
-# Mensch und Maschine IA3 / Physical Interfaces WS2019/2020
+# IA3 Mensch und Maschine / Physical Interfaces WS2019/2020
 course physical interfaces
