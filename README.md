@@ -1,6 +1,5 @@
 # Mensch und Maschine / Physical Interfaces WS2019/2020
-course physical interfaces
-HS Augsburg, Interaktive Medien, 3. Semester, Prof. Andreas Muxel
+HS Augsburg, IA3, Prof. Andreas Muxel
 
 ---
 15.10.2019
