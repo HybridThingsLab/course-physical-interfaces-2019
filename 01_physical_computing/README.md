@@ -2,6 +2,6 @@
 
 images for breadboarding are provided in each folder
 
-comments:
+comments:<br>
 007_potiToServo >> wires servo (red = +5V, brown = GND, Orange = Signal Pin)
 
