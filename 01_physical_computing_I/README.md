@@ -1,4 +1,4 @@
-# Introduction Physcial Computing 01
+# Physcial Computing 01
 
 - images for breadboarding are provided in each folder
 - example capacitve sensing uses Capacitive Sensor Arduino Library (https://github.com/PaulStoffregen/CapacitiveSensor)
