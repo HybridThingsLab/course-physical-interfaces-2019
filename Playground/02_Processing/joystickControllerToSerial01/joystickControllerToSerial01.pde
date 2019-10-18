@@ -1,4 +1,4 @@
-import org.gamecontrolplus.gui.*;
+import org.gamecontrolplus.gui.*; //http://lagers.org.uk/gamecontrol/download.html
 import org.gamecontrolplus.*;
 import net.java.games.input.*;
 import processing.serial.*;
@@ -20,8 +20,6 @@ public void setup() {
     println("No suitable device configured");
     System.exit(-1); // End the program NOW!
   }
-  // Setup a function to trap events for this button
-  stick.getButton("SHADOW").plug(this, "dropShadow", ControlIO.ON_RELEASE);
 
   // serial
   // List all the available serial ports
@@ -51,12 +49,6 @@ public void getUserInput() {
   myPort.write(str(servo_y)); // send integer as string
   myPort.write(lf); // line feed
   
-}
-
-// Event handler for the SHADOW button
-public void dropShadow() {
-  // Make sure we have the latest position
-  getUserInput();
 }
 
 public void draw() {

@@ -1,5 +1,3 @@
-Shadow maker
-X	X position	3	SLIDER	x	0	1.0	0.0
-Y	Y position	3	SLIDER	y	0	1.0	0.0
-SHADOW	Drop shadow	1	BUTTON	0	0	0.0	0.0
-TRAIL	Leave trail	1	BUTTON	1	0	0.0	0.0
+Robot Controller
+Servo1	x_position	3	SLIDER	rx	0	1.0	0.0
+Servo2	y_position	3	SLIDER	ry	0	1.0	0.0
