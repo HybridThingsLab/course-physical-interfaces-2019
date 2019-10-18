@@ -6,6 +6,8 @@ import processing.serial.*;
 ControlIO control;
 ControlDevice stick;
 float px, py;
+float px_smooth;
+float py_smooth;
 
 int lf = 10;    // Linefeed in ASCII
 Serial myPort;  // The serial port
@@ -37,8 +39,12 @@ public void getUserInput() {
   px = map(stick.getSlider("rx").getValue(), -1, 1, 0, width);
   py = map(stick.getSlider("ry").getValue(), -1, 1, 0, height);
   
-  int servo_x = int(map(px,0,width,180,0));
-  int servo_y = int(map(py,0,height,0,180));
+  // smooth value
+  px_smooth += (px - px_smooth)*0.085;
+  py_smooth += (py - py_smooth)*0.085;
+  
+  int servo_x = int(map(px_smooth,0,width,180,0));
+  int servo_y = int(map(py_smooth,0,height,0,180));
   
   // send values to serial port
     // send message
@@ -58,4 +64,6 @@ public void draw() {
   noStroke();
   fill(255);
   ellipse(px, py, 20, 20);
+  fill(0,255,0);
+  ellipse(px_smooth, py_smooth, 20, 20);
 }
