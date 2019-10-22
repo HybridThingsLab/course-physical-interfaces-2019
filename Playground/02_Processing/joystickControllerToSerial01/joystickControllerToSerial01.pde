@@ -27,7 +27,7 @@ public void setup() {
   // List all the available serial ports
   printArray(Serial.list());
   // Open the port you are using at the rate you want:
-  myPort = new Serial(this, Serial.list()[3], 9600);
+  myPort = new Serial(this, Serial.list()[3], 57600);
   myPort.clear();
   
   delay(1000); // bugfix if serial not detected
@@ -42,8 +42,8 @@ public void getUserInput() {
   // smooth value
   px_smooth += (px - px_smooth)*1.0;//0.085;
   py_smooth += (py - py_smooth)*1.0;//0.085;
-  //px_smooth += (px - px_smooth)*0.05;
-  //py_smooth += (py - py_smooth)*0.05;
+  //px_smooth += (px - px_smooth)*0.08;
+  //py_smooth += (py - py_smooth)*0.08;
   
   int servo_x = int(map(px_smooth,0,width,180,0));
   int servo_y = int(map(py_smooth,0,height,0,180));
