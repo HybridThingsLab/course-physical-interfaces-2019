@@ -40,8 +40,10 @@ public void getUserInput() {
   py = map(stick.getSlider("ry").getValue(), -1, 1, 0, height);
   
   // smooth value
-  px_smooth += (px - px_smooth)*0.085;
-  py_smooth += (py - py_smooth)*0.085;
+  px_smooth += (px - px_smooth)*1.0;//0.085;
+  py_smooth += (py - py_smooth)*1.0;//0.085;
+  //px_smooth += (px - px_smooth)*0.05;
+  //py_smooth += (py - py_smooth)*0.05;
   
   int servo_x = int(map(px_smooth,0,width,180,0));
   int servo_y = int(map(py_smooth,0,height,0,180));
