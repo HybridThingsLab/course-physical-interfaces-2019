@@ -7,7 +7,7 @@ NetAddress remoteLocation;
 OscMessage message;
 int receivedData;
 
-int generalSpeed = 300;
+int generalSpeed = 1023;
 
 void setup() {
   size(400, 400);

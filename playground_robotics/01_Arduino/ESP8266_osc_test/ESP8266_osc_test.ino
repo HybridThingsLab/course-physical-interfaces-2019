@@ -1,3 +1,5 @@
+// documentation ESP8266: https://www.mikrocontroller-elektronik.de/nodemcu-esp8266-tutorial-wlan-board-arduino-ide/
+
 // libraries
 #include <ArduinoOSC.h> // https://github.com/hideakitai/ArduinoOSC
 #include <Chrono.h> // https://github.com/SofaPirate/Chrono

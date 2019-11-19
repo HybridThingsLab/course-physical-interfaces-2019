@@ -47,14 +47,14 @@ void loop() {
 
     // servo easing test
     if (state == 0) {
-      Servo1.startEaseTo(20, 60); // position, degrees per second
+      Servo1.startEaseTo(20, 90); // position, degrees per second
       Servo2.startEaseTo(20, 90); // position, degrees per second
       Servo3.startEaseTo(0, 30); // position, degrees per second
       // state
       state = 1;
       Serial.println("one");
     } else {
-      Servo1.startEaseTo(160, 60);
+      Servo1.startEaseTo(160, 90);
       Servo2.startEaseTo(160, 90);
       Servo3.startEaseTo(180, 30);
       // state

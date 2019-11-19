@@ -1,3 +1,5 @@
+## documentation ESP8266: https://www.mikrocontroller-elektronik.de/nodemcu-esp8266-tutorial-wlan-board-arduino-ide/
+
 ## watch
 https://www.youtube.com/watch?v=TOrVsLklltM
 
