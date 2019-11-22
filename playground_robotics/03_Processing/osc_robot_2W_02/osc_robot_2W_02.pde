@@ -5,12 +5,16 @@ import netP5.*;
 OscP5 oscP5;
 NetAddress remoteLocation;
 OscMessage message;
-int receivedData;
 
+// sensor
+int receivedData;
+int smoothData;
+
+// motor
 int generalSpeed = 1023;
 
 void setup() {
-  size(400, 400);
+  size(1000, 700);
   frameRate(60);
   /* start oscP5, listening for incoming messages at port 8888 */
   oscP5 = new OscP5(this, 8888);
@@ -32,6 +36,13 @@ void draw() {
   // show values received via osc
   fill(255);
   text("some random data: "+receivedData, 100, height/2);
+  
+  // smooth Data
+  smoothData += (receivedData-smoothData)/10; // higher value = higher smooth
+  
+  // draw sensor value
+  rect(10,10,20, smoothData);
+  
 }
 
 // custom function motor

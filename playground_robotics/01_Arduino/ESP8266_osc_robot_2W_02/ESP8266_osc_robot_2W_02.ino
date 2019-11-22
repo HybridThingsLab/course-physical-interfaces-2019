@@ -26,7 +26,7 @@ const int send_port = 8888;
 
 // Instanciate a chrono object.
 Chrono replyChrono;
-int timer = 25;
+int timer = 16; // ms
 
 /// drive motor
 void driveMotor(int IDmotor, OscMessage m) {
@@ -90,7 +90,7 @@ void loop() {
   // check if chrono and send back whatever date via osc
   if (replyChrono.hasPassed(timer) ) {
     replyChrono.restart();
-    osc.send(host, send_port, "/send", analogRead(A0));
+    osc.send(host, send_port, "/send", analogRead(A0)); // all x ms  
   }
 
 }
