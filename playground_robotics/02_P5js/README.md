@@ -1,3 +1,6 @@
+# chatbots
+## thanks to Daniel Shiffmann for sharing: https://github.com/shiffman/A2Z-F17/tree/master/week4-chatbots
+
 # p5js-osc
 
 ## install node.js and p5js-osc library by Gene Kogan (https://github.com/genekogan/p5js-osc)
