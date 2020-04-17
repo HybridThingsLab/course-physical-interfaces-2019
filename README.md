@@ -1,4 +1,4 @@
-# Mensch und Maschine / Physical Interfaces WS2019/2020
+# Mensch und Maschine / Physical Interfaces winter-term 2019/2020
 HS Augsburg, IA3, Prof. Andreas Muxel 
 
 ---
