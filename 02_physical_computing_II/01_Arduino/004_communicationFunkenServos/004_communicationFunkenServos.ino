@@ -15,7 +15,7 @@ Servo servo2;
 void setup() {
 
   // init funken
-  fnk.begin(9600, 0, 0); // higher baudrate for better performance
+  fnk.begin(115200, 0, 0); // higher baudrate for better performance
   fnk.listenTo("CONTROL", control);
 
   // init servos

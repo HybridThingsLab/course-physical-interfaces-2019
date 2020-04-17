@@ -10,7 +10,7 @@ void setup() {
   // List all the available serial ports
   printArray(Serial.list());
   // Open the port you are using at the rate you want:
-  myPort = new Serial(this, Serial.list()[3], 9600);
+  myPort = new Serial(this, Serial.list()[3], 115200);
   myPort.clear();
   // wait a moment to make sure serial connection works
   delay(1000);
