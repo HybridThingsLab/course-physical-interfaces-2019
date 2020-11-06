@@ -17,7 +17,7 @@ function draw() {
 	let pos_x = int(map(mouseX, 0, width, 0, 180));
 	let pos_y = int(map(mouseX, 0, width, 0, 180));
 
-	console.lot(pos_X + "_" + pos_y);
+	console.log(pos_X + "_" + pos_y);
 
 }
 
