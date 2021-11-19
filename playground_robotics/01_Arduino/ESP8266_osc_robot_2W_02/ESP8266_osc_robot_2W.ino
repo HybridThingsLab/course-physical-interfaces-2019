@@ -19,7 +19,6 @@ int pinSpeed1 = D6;
 int pinSpeed2 = D5;
 
 // for ArduinoOSC
-OscWiFi osc;
 const char* host = "192.168.1.100";
 const int recv_port = 9999;
 const int send_port = 8888;
@@ -60,9 +59,6 @@ void setup() {
   }
   Serial.print("WiFi connected, IP = "); Serial.println(WiFi.localIP());
 
-  // ArduinoOSC
-  osc.begin(recv_port);
-
   // pin modes
   pinMode(pinDir1, OUTPUT);
   pinMode(pinDir2, OUTPUT);
@@ -72,10 +68,10 @@ void setup() {
   analogWrite(pinSpeed2, 0);
 
   // osc messages
-  osc.subscribe("/motor1", [](OscMessage & m) {
+  OscWiFi.subscribe(recv_port,"/motor1", [](OscMessage & m) {
     driveMotor(0, m);
   });
-  osc.subscribe("/motor2", [](OscMessage & m) {
+  OscWiFi.subscribe(recv_port, "/motor2", [](OscMessage & m) {
     driveMotor(1, m);
   });
 
@@ -84,13 +80,13 @@ void setup() {
 
 void loop() {
 
-  osc.parse(); // should be called
+  OscWiFi.parse(); // should be called
 
 
   // check if chrono and send back whatever date via osc
   if (replyChrono.hasPassed(timer) ) {
     replyChrono.restart();
-    osc.send(host, send_port, "/send", analogRead(A0)); // all x ms  
+    //OscWiFi.send(host, send_port, "/send", analogRead(A0)); // all x ms  
   }
 
 }
